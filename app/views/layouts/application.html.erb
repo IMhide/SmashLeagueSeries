@@ -5,11 +5,130 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="page-wrapper">
+      <!-- Main Header -->
+      <header class="main-header">
+        <!-- Header Top -->
+        <div class="header-top">
+          <div class="auto-container clearfix">
+
+            <div class="top-left clearfix">
+              <ul class="info-list">
+              </ul>
+            </div>
+
+            <div class="top-right">
+              <ul class="social-icons">
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Header Upper -->
+        <div class="header-upper">
+          <div class="inner-container">
+            <div class="auto-container clearfix">
+              <!--Logo-->
+              <div class="logo-outer">
+                <div class="logo"><a href="index.html"><%= image_tag 'log.png' %> </a></div>
+              </div>
+
+              <!--Nav Box-->
+              <div class="nav-outer clearfix">
+                <!--Mobile Navigation Toggler-->
+                <div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+
+                <!-- Main Menu -->
+                <nav class="main-menu navbar-expand-md navbar-light">
+                  <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                    <ul class="navigation clearfix pull-left">
+                      <li class="current dropdown"><a href="index.html">Home</a>
+                        <ul>
+                          <li><a href="index.html">Home page 01</a></li>
+                          <li><a href="index-2.html">Home page 02</a></li>
+                          <li class="dropdown"><a href="index.html">Header Styles</a>
+                            <ul>
+                              <li><a href="index.html">Header Style One</a></li>
+                              <li><a href="index-2.html">Header Style Two</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a href="about-clan.html">Pages</a>
+                        <ul>
+                          <li><a href="about-clan.html">About Clan</a></li>
+                          <li><a href="about-me.html">About Me</a></li>
+                          <li><a href="players.html">Players</a></li>
+                          <li><a href="faq.html">Faq's</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+
+                    <ul class="navigation pull-right clearfix">
+                      <li class="dropdown"><a href="matches.html">Matches</a>
+                        <ul>
+                          <li><a href="matches.html">Matches</a></li>
+                          <li><a href="matches-single.html">Matches Single</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a href="blog.html">Blog</a>
+                        <ul>
+                          <li><a href="blog.html">Blog</a></li>
+                          <li><a href="blog-single.html">Blog Single</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="contact.html">Contacts</a></li>
+                    </ul>
+                  </div>
+                </nav>
+                <!-- Main Menu End-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Header Upper-->
+
+        <!-- Sticky Header  -->
+        <div class="sticky-header">
+          <div class="auto-container clearfix">
+            <!--Logo-->
+            <div class="logo pull-left">
+              <a href="index.html" title=""><%= image_tag 'log.png' %></a>
+            </div>
+            <!--Right Col-->
+            <div class="pull-right">
+              <!-- Main Menu -->
+              <nav class="main-menu clearfix">
+                <!--Keep This Empty / Menu will come through Javascript-->
+              </nav><!-- Main Menu End-->
+            </div>
+          </div>
+        </div><!-- End Sticky Menu -->
+
+        <!-- Mobile Menu  -->
+        <div class="mobile-menu">
+          <div class="menu-backdrop"></div>
+          <div class="close-btn"><span class="icon flaticon-close"></span></div>
+
+          <nav class="menu-box">
+            <div class="nav-logo"><a href="index.html"><%= image_tag 'log.png' %></a></div>
+            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+            <!--Social Links-->
+            <div class="social-links">
+              <ul class="clearfix">
+              </ul>
+            </div>
+          </nav>
+        </div><!-- End Mobile Menu -->
+      </header>
+      <!-- End Main Header -->
+      <%= yield %>
+    </div>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>

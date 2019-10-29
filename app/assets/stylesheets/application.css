@@ -10,6 +10,16 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require bootstrap
+ *= require fontawesome-all
+ *= require animate
+ *= require flaticon
+ *= require owl
+ *= require jquery-ui
+ *= require jquery.fancybox.min
+ *= require scrollbar
+ *= require hover
+ *= require style
+ *= require responsive
  *= require_self
  */

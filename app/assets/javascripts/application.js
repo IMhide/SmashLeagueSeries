@@ -12,9 +12,13 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require jquery.min
-//= require materialize.min
-//= require datatables.min
-//= require input_pagination
-//= require main
-//= require tables
+//= require jquery
+//= require popper.min
+//= require jquery-ui
+//= require jquery.fancybox
+//= require owl
+//= require appear
+//= require wow
+//= require scrollbar
+//= require script
+//
