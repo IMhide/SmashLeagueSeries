@@ -4,7 +4,7 @@
     <div class="auto-container clearfix">
       <!--Logo-->
       <div class="logo-outer">
-        <div class="logo"><a href="index.html"><%= image_tag 'log.png' %> </a></div>
+        <div class="logo"><%= link_to image_tag('log.png'), root_path %></div>
       </div>
 
       <!--Nav Box-->
@@ -22,8 +22,8 @@
 
             <ul class="navigation pull-right clearfix">
               <li class=""><%= link_to 'Matches', '#' %></li>
-              <li class=""><%= link_to 'VOD', '#' %></li>
-              <li class=""><%= link_to 'SLS Crew', '#' %></li>
+              <li class=""><%= link_to 'VOD', vods_path  %></li>
+              <li class=""><%= link_to 'SLS Crew', about_us_path %></li>
             </ul>
           </div>
         </nav>
