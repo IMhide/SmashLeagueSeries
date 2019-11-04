@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :vods, only: [:index, :show]
   resources :matches, only: [:index, :show]
   resources :about_us, only: [:index]
+  resources :rules, only: [:index]
 end
