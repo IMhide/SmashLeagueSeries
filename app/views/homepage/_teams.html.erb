@@ -6,52 +6,26 @@
       <h2>Les 6 equipes</h2>
     </div>
 
-    <div class="row clearfix">
-
-      <!--Default Portfolio Item-->
-      <div class="default-portfolio-item col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-        <div class="inner-box hvr-bob">
-          <figure class="image-box"><img src="images/gallery/1.jpg" alt=""></figure>
-          <!--Overlay Box-->
-          <div class="overlay-box">
-            <div class="overlay-inner">
-              <div class="content">
-                <h3><a href="#">Gaming <br> Studio</a></h3>
+    <% Team.all.in_groups_of(3, false) do |group| %>
+      <div class="row clearfix">
+        <% group.each do |team| %>
+          <div class="default-portfolio-item col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+            <div class="inner-box hvr-bob">
+              <figure class="image-box"><%= image_tag(url_for(team.image))%></figure>
+              <!--Overlay Box-->
+              <div class="overlay-box">
+                <div class="overlay-inner">
+                  <div class="content">
+                    <h3><%= link_to team.name ,team %></h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!--Default Portfolio Item-->
-      <div class="default-portfolio-item col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-        <div class="inner-box hvr-bob">
-          <figure class="image-box"><img src="images/gallery/2.jpg" alt=""></figure>
-          <!--Overlay Box-->
-          <div class="overlay-box">
-            <div class="overlay-inner">
-              <div class="content">
-                <h3><a href="#">Gaming <br> Studio</a></h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!--Default Portfolio Item-->
-      <div class="default-portfolio-item col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-        <div class="inner-box hvr-bob">
-          <figure class="image-box"><img src="images/gallery/3.jpg" alt=""></figure>
-          <!--Overlay Box-->
-          <div class="overlay-box">
-            <div class="overlay-inner">
-              <div class="content">
-                <h3><a href="#">Gaming <br> Studio</a></h3>
-              </div>
-            </div>
-          </div>
-        </div>
+        <% end %>
       </div>
-    </div>
+    <% end %>
   </div>
 </section>

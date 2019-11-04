@@ -1,0 +1,32 @@
+<%= render partial: "layouts/sub_header", locals: {image_name: 'top-bg.jpg', text: 'Les equipes' } %>
+<% Team.find_each do |team| %>
+  <section class="player-info-section">
+    <div class="auto-container">
+      <div class="row clearfix">
+        <!--Text Column-->
+        <div class="text-column col-lg-6 col-md-6 col-sm-12">
+          <div class="inner wow fadeInRight">
+            <div class="title-box">
+              <div class="user-title"><%= link_to team.name, team, style: 'color: white' %></div>
+              <div class="user-info"><%= team.punchline %></div>
+            </div>
+            <div class="text"><%= team.long_description %></div>
+            <ul class="social-icons">
+              <li>
+                <%= link_to "https://twitter.com/#{team.twitter}", target: :blank do %>
+                  <span class="fab fa-twitter"></span>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--Image Column-->
+        <div class="image-column col-lg-6 col-md-6 col-sm-12">
+          <div class="inner wow fadeInLeft">
+            <figure class="image"><%= link_to image_tag(url_for(team.image)), team %></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<% end %>

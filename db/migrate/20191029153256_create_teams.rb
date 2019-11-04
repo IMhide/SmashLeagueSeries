@@ -3,6 +3,7 @@ class CreateTeams < ActiveRecord::Migration[6.0]
     create_table :teams do |t|
       t.string :name
       t.string :punchline
+      t.string :twitter
       t.text   :long_description
 
       t.timestamps

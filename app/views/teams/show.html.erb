@@ -1,0 +1,26 @@
+<%= render partial: "layouts/sub_header", locals: {image_name: 'top-bg-player.jpg', text: @team.name } %>
+
+<section class="players-section players-page-section">
+  <div class="auto-container">
+    <% @team.players.in_groups(3, false) do |group| %>
+      <div class="row clearfix">
+        <% group.each do |player| %>
+          <div class="player-block col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0ms">
+            <div class="inner-box hvr-bob">
+              <div class="image">
+                <a href="#"><%= image_tag url_for(player.image) %></a>
+              </div>
+              <div class="lower-content">
+                <h3><a href="#"><%= player.name %></a></h3>
+                <div class="level"><%= player.role %></div>
+                <ul class="social-icons">
+                  <li><%= link_to "https://twitter.com/#{player.twitter}", target: :blank do %><span class="fab fa-twitter"></span><% end %></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</section>
