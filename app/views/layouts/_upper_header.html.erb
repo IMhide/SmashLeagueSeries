@@ -1,0 +1,36 @@
+<!-- Header Upper -->
+<div class="header-upper">
+  <div class="inner-container">
+    <div class="auto-container clearfix">
+      <!--Logo-->
+      <div class="logo-outer">
+        <div class="logo"><a href="index.html"><%= image_tag 'log.png' %> </a></div>
+      </div>
+
+      <!--Nav Box-->
+      <div class="nav-outer clearfix">
+        <!--Mobile Navigation Toggler-->
+        <div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+
+        <!-- Main Menu -->
+        <nav class="main-menu navbar-expand-md navbar-light">
+          <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+            <ul class="navigation clearfix pull-left">
+              <li class=""><%= link_to 'Acceuil', root_path %></li>
+              <li class=""><%= link_to 'Equipes', teams_path %></li>
+            </ul>
+
+            <ul class="navigation pull-right clearfix">
+              <li class=""><%= link_to 'Matches', '#' %></li>
+              <li class=""><%= link_to 'VOD', '#' %></li>
+              <li class=""><%= link_to 'SLS Crew', '#' %></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Main Menu End-->
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Header Upper-->
+
