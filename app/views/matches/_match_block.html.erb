@@ -1,0 +1,48 @@
+<div class="matches-block">
+  <div class="inner-block">
+    <div class="row clearfix">
+
+      <!-- Content Column -->
+      <div class="content-column col-lg-7 col-md-12 col-sm-12">
+        <div class="inner-column">
+          <ul class="tags">
+          </ul>
+          <div class="title"><%= raw match.title %></div>
+          <h2><%= link_to "#{match.team1.name} contre #{match.team2.name}", match_path(match) %></h2>
+          <div class="date"><%= match.scheduled_at %></div>
+        </div>
+      </div>
+
+      <!-- Match Column -->
+      <div class="match-column col-lg-5 col-md-12 col-sm-12">
+        <div class="inner-column">
+          <div class="row clearfix">
+
+            <!-- Match Item -->
+            <div class="match-item col-lg-6 col-md-6 col-sm-12">
+              <div class="inner-item">
+                <div class="icon-box" style = 'padding: 0px;'>
+                  <%= image_tag url_for(match.team1.image) %>
+                </div>
+                <%= link_to match.team1.name, team_path(match.team1), class: 'product', style: match.team1_style %>
+              </div>
+            </div>
+
+            <!-- Match Item -->
+            <div class="match-item col-lg-6 col-md-6 col-sm-12">
+              <div class="inner-item">
+                <div class="icon-box" style='padding: 0px'>
+                  <%= image_tag url_for(match.team2.image) %>
+                </div>
+                <%= link_to match.team2.name, team_path(match.team2), class: 'product', style: match.team2_style %>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

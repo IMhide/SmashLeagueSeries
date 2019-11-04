@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root 'homepage#index'
   resources :teams, only: [:index, :show]
   resources :vods, only: [:index, :show]
+  resources :matches, only: [:index, :show]
   resources :about_us, only: [:index]
 end

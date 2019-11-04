@@ -1,0 +1,41 @@
+<%= render partial: "layouts/sub_header", locals: {image_name: 'lol-pic-2.jpg', text: 'Les matches'} %>
+<!-- Matches Section -->
+<section class="matches-section">
+  <div class="auto-container">
+    <div class="matches-info-tabs">
+      <div class="matches-tabs tabs-box">
+        <ul class="tab-btns tab-buttons clearfix">
+          <li data-tab="#prod-all" class="tab-btn active-btn"><span>Prochains matches</span></li>
+          <li data-tab="#prod-matches" class="tab-btn"><span>Matches terminés</span></li>
+          <li data-tab="#prod-results" class="tab-btn"><span>Tous les matches</span></li>
+        </ul>
+        <div class="tabs-content">
+          <div class="tab active-tab" id="prod-all">
+            <div class="content">
+              <% @scheduled.each do |match| %>
+                <%= render partial: "matches/match_block", locals: {match: match} %>
+              <% end %>
+            </div>
+          </div>
+          <div class="tab" id="prod-matches">
+            <div class="content">
+              <% @played.each do |match| %>
+                <%= render partial: "matches/match_block", locals: {match: match} %>
+              <% end %>
+
+            </div>
+          </div>
+          <div class="tab" id="prod-results">
+            <div class="content">
+              <% @all.each do |match| %>
+                <%= render partial: "matches/match_block", locals: {match: match} %>
+              <% end %>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
