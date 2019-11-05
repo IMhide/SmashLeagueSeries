@@ -1,2 +1,57 @@
 <%= render partial: "layouts/sub_header", locals: {image_name: 'top-bg-about.jpg', text: 'Le SLS Crew'} %>
-<h1>Coming Soon</h1>
+<section class="welcome-section">
+  <div class="sec-title centered">
+    <div class="title">
+      Le SLS Crew c'est 3 Smashers aliant leurs forces, talents et amour pour League of Legend pour vous fournir un tournois d'une qualitée supérieur
+    </div>
+  </div>
+</section>
+
+<section class="players-section players-page-section">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <div class="player-block col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0ms">
+        <div class="inner-box hvr-bob">
+          <div class="image">
+            <a href="#"><%= image_tag asset_url('abdel.jpg') %></a>
+          </div>
+          <div class="lower-content">
+            <h3><a href="#">Adbel 'Teach' R.</a></h3>
+            <div class="level"> Fondateur, Head Admin</div>
+            <ul class="social-icons">
+              <li><%= link_to "https://twitter.com/abdelr97", target: :blank do %><span class="fab fa-twitter"></span><% end %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="player-block col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0ms">
+        <div class="inner-box hvr-bob">
+          <div class="image">
+            <a href="#"><%= image_tag asset_url('sam.jpg') %></a>
+          </div>
+          <div class="lower-content">
+            <h3><a href="#">Sam 'PeterPunk' E.</a></h3>
+            <div class="level"> Responsable Executif, Admin</div>
+            <ul class="social-icons">
+              <li><%= link_to "https://twitter.com/peterpunk___", target: :blank do %><span class="fab fa-twitter"></span><% end %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="player-block col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0ms">
+        <div class="inner-box hvr-bob">
+          <div class="image">
+            <a href="#"><%= image_tag asset_url('marius.jpg') %></a>
+          </div>
+          <div class="lower-content">
+            <h3><a href="#">Marius '5D' .</a></h3>
+            <div class="level"> Caster Officiel</div>
+            <ul class="social-icons">
+              <li><%= link_to "https://twitter.com/5D_Caster", target: :blank do %><span class="fab fa-twitter"></span><% end %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

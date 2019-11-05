@@ -1,5 +1,11 @@
 <%= render partial: "layouts/sub_header", locals: {image_name: 'top-bg-player.jpg', text: @team.name } %>
 
+
+<section class="welcome-section">
+  <div class="sec-title centered">
+    <div class="title"><%= @team.long_description %></div>
+  </div>
+</section>
 <section class="players-section players-page-section">
   <div class="auto-container">
     <% @team.players.in_groups_of(3, false) do |group| %>
