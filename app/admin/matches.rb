@@ -15,4 +15,7 @@ ActiveAdmin.register Match do
   #   permitted
   # end
   
+  filter :team1
+  filter :team2
+
 end

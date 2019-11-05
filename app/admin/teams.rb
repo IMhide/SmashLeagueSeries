@@ -29,6 +29,8 @@ ActiveAdmin.register Team do
     end
   end
 
+  filter :name
+
   form do |f|
     f.inputs "Team" do
       f.input :name
