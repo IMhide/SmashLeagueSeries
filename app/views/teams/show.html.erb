@@ -2,7 +2,7 @@
 
 <section class="players-section players-page-section">
   <div class="auto-container">
-    <% @team.players.in_groups(3, false) do |group| %>
+    <% @team.players.in_groups_of(3, false) do |group| %>
       <div class="row clearfix">
         <% group.each do |player| %>
           <div class="player-block col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0ms">
