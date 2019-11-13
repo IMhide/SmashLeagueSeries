@@ -14,4 +14,12 @@ class Team < ApplicationRecord
   def all_matches
     team1_matches.or(team2_matches).order(:scheduled_at)
   end
+
+  def win_count
+    @_win_count ||= winning_matches.count 
+  end
+
+  def loss_count
+    @_loss_count ||= loosing_matches.count
+  end
 end
